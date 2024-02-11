@@ -2,12 +2,13 @@ import os
 from octo.model.octo_model import OctoModel
 from PIL import Image
 import requests
+import jax
 import matplotlib.pyplot as plt
 import numpy as np
 
 model = OctoModel.load_pretrained("hf://rail-berkeley/octo-small")
 print("Start recording audio")
-sample_name = "aaaa.wav"
+sample_name = "cha.m4a"
 cmd = f'arecord -vv --format=cd --device={os.environ["AUDIO_INPUT_DEVICE"]} -r 48000 --duration=10 -c 1 {sample_name}'
 print(cmd)
 os.system(cmd)
