@@ -3,4 +3,5 @@ numpy
 ffmpeg-python
 Pillow
 requests
+octo
 reachy-sdk
